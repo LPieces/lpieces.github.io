@@ -2911,3 +2911,6 @@ mark.search-keyword {
     display: none;
   }
 }
+.posts-expand .post-header {
+  margin-bottom: 0 !important;
+}
