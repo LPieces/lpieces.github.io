@@ -2906,3 +2906,8 @@ mark.search-keyword {
     margin: 8px 0 0;
   }
 }
+@media (max-width: 991px) {
+  .github-corner >svg {
+    display: none;
+  }
+}
