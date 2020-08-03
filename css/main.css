@@ -2914,3 +2914,6 @@ mark.search-keyword {
 .posts-expand .post-header {
   margin-bottom: 0 !important;
 }
+.v[data-class=v] .txt-right {
+  display: none !important;
+}
