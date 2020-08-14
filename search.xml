@@ -101,7 +101,13 @@
 
 <h4 id="销毁阶段"><a href="#销毁阶段" class="headerlink" title="销毁阶段"></a>销毁阶段</h4><h5 id="beforeDestroy"><a href="#beforeDestroy" class="headerlink" title="beforeDestroy"></a>beforeDestroy</h5><p>当执行beforeDestroy钩子函数的时候，Vue实例已经从运行阶段，进入到了销毁阶段<br>当执行beforeDestroy的时候，实例身上所有的data和所有的methods，以及过滤器、指令。。。等<br>都处于可用状态，此时，还没有真正执行销毁的过程</p>
 <h5 id="destroyed"><a href="#destroyed" class="headerlink" title="destroyed"></a>destroyed</h5><p>当执行到destroyed函数的时候，组件已经被完全销毁了，此时，组件中所有的数据、方法、指令、过滤器。。。等，都已经不可用了</p>
-]]></content>
+<h3 id="插槽（slot）"><a href="#插槽（slot）" class="headerlink" title="插槽（slot）"></a>插槽（slot）</h3><p>如果组件中有一段父组件传递的代码段，可以用插槽解决<br>插槽可以有默认值,如果父组件没有传递，且需要占位，可以给<slot>default content</slot></p>
+<h4 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h4><p>如果有多个代码段，用具名插槽，v-slot:header     缩写#header</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- NameSlot 组件 --&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;header&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;slot&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;footer&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;footer&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;!-- 使用NameSlot组件 --&gt;</span><br><span class="line">&lt;name-slot&gt;</span><br><span class="line">    &lt;!-- 缩写 #header --&gt;</span><br><span class="line">    &lt;template v-slot:header&gt;</span><br><span class="line">        &lt;h1&gt;将插入 header slot 中&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">    &lt;p&gt;将插入到 main slot 中,即未命名的slot&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;template v-slot:footer&gt;</span><br><span class="line">        &lt;h1&gt;将插入 footer slot 中&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;name-slot&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h4>]]></content>
       <categories>
         <category>Vue</category>
       </categories>
