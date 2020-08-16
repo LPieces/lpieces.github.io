@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="APlayer.min.css">
+    <script src="APlayer.min.js"></script>
+</head>
+<body style="margin: 0px;">  
+    <div id="aplayer" style="margin: 0px;"></div>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            audio: [
+                {
+                    name: 'pieces',
+                    artist: 'SUM 41',
+                    url: 'http://music.163.com/song/media/outer/url?id=4278420.mp3',
+                    cover: 'http://p1.music.126.net/XveqKrjeLWEhTCLHgs_d7w==/2540971372812664.jpg?param=130y130'
+                },
+                {
+                    name: 'Shouting Out',
+                    artist: 'Grey Daze',
+                    url: 'http://m10.music.126.net/20200817013620/a8ba2231c7c82c0b07f3167426824de9/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3010247762/5bf5/e899/540d/95e66f4aa881f893a00b94ca7ff5e911.mp3',
+                    cover: 'https://p3.music.126.net/HWRG-tTeXLTYK3I3sJdMDA==/109951165090204073.jpg?param=300y300'
+                },
+                {
+                    name: 'In Time',
+                    artist: 'Grey Daze',
+                    url: 'http://m10.music.126.net/20200817013834/cdccc92996bb211a881988684af7372b/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3010248678/b3d2/1d77/5b71/e7b0fd5c1a25653efbd2ecf10bd05c0c.mp3',
+                    cover: 'https://p3.music.126.net/HWRG-tTeXLTYK3I3sJdMDA==/109951165090204073.jpg?param=300y300'
+                },
+                {
+                    name: 'Morei Sky',
+                    artist: 'Grey Daze',
+                    url: 'http://music.163.com/song/media/outer/url?id=1458192400.mp3',
+                    cover: 'http://p2.music.126.net/HWRG-tTeXLTYK3I3sJdMDA==/109951165090204073.jpg?param=300x300'
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
