@@ -1,0 +1,23 @@
+{
+  "name": "lpieces.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "vuepress": "^1.9.5",
+    "vuepress-plugin-permalink-pinyin": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress-plugin-dynamic-title": "^1.0.0",
+    "vuepress-plugin-meting": "^0.3.1",
+    "vuepress-theme-reco": "^1.6.10"
+  }
+}
