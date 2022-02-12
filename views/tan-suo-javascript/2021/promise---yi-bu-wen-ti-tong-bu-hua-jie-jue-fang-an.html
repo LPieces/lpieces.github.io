@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Promise - 异步问题同步化解决方案 | LPieces&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://p9-passport.byteacctimg.com/img/user-avatar/ed78b80d2ce13a5eddc5f007c926c424~300x300.image">
+    <meta name="description" content="Love Learning And Love Life.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.19fcc48d.css" as="style"><link rel="preload" href="/assets/js/app.4e3f1233.js" as="script"><link rel="preload" href="/assets/js/3.03b3ff5a.js" as="script"><link rel="preload" href="/assets/js/1.180526b5.js" as="script"><link rel="preload" href="/assets/js/14.bb56bb6d.js" as="script"><link rel="prefetch" href="/assets/js/10.9634a7c2.js"><link rel="prefetch" href="/assets/js/11.9ffd7a15.js"><link rel="prefetch" href="/assets/js/12.e5e4c80e.js"><link rel="prefetch" href="/assets/js/13.eae8846f.js"><link rel="prefetch" href="/assets/js/15.f6aba584.js"><link rel="prefetch" href="/assets/js/16.2efc4861.js"><link rel="prefetch" href="/assets/js/17.b044ae8d.js"><link rel="prefetch" href="/assets/js/18.2306d121.js"><link rel="prefetch" href="/assets/js/19.67b20d31.js"><link rel="prefetch" href="/assets/js/4.9ec46fde.js"><link rel="prefetch" href="/assets/js/5.0693225a.js"><link rel="prefetch" href="/assets/js/6.386c8435.js"><link rel="prefetch" href="/assets/js/7.dbce441f.js"><link rel="prefetch" href="/assets/js/8.0416eaa0.js"><link rel="prefetch" href="/assets/js/9.382c2305.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.19fcc48d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>LPieces's Blog</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>Love Learning And Love Life.</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>LPieces</span>
+            
+          <span data-v-25ba6db2>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://p9-passport.byteacctimg.com/img/user-avatar/ed78b80d2ce13a5eddc5f007c926c424~300x300.image" alt="LPieces's Blog" class="logo"> <span class="site-name">LPieces's Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/探索JavaScript/" class="nav-link"><i class="undefined"></i>
+  探索JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/日常开发/" class="nav-link"><i class="undefined"></i>
+  日常开发
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/LPieces" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/176367608019806" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-juejin"></i>
+  稀土掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><img src="https://p9-passport.byteacctimg.com/img/user-avatar/ed78b80d2ce13a5eddc5f007c926c424~300x300.image" alt="author-avatar" class="personal-img" data-v-39576ba9> <h3 class="name" data-v-39576ba9>
+    LPieces
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>8</h3> <h6 data-v-39576ba9>文章</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>11</h3> <h6 data-v-39576ba9>标签</h6></div></div> <ul class="social-links" data-v-39576ba9><li class="social-item" data-v-39576ba9><i class="iconfont reco-github" style="color:#f8b26a;" data-v-39576ba9></i></li><li class="social-item" data-v-39576ba9><i class="iconfont reco-juejin" style="color:#f26d6d;" data-v-39576ba9></i></li></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/探索JavaScript/" class="nav-link"><i class="undefined"></i>
+  探索JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/日常开发/" class="nav-link"><i class="undefined"></i>
+  日常开发
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/LPieces" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/176367608019806" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-juejin"></i>
+  稀土掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>Promise - 异步问题同步化解决方案</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>LPieces</span>
+            
+          <span data-v-25ba6db2>2021 - </span>
+          2022
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page"><section><div class="page-title"><h1 class="title">Promise - 异步问题同步化解决方案</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>LPieces</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>2021/10/12</span></i> <!----> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>Promise</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="什么是-promise"><a href="#什么是-promise" class="header-anchor">#</a> 什么是 Promise?</h2> <p><strong>Promise</strong> 是ES6提供的一个原生的构造函数，我们可以打印看一下这个构造函数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(Promise)
+打印结果： ƒ Promise() { [native code] }
+console.log(typeof Promise)
+打印结果： function
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/663b8e1f30a142b588341930f800bc79~tplv-k3u1fbpfcp-watermark.image?" alt="截屏2021-10-08 上午11.20.52.png"></p> <p>可以看到 <code>Promise</code> 是一个构造函数，自身有<code>all</code>、<code>reject</code>、<code>resolve</code>这几个方法，原型上有<code>then</code>、<code>catch</code>等方法。
+用<code>new</code>关键字和<code>Promise</code>构造器创建它的对象。该函数接受两个函数参数。当异步成功时，第一个函数（<code>resolve</code>）将被调用，并返回一个值代表成功。当其失败时，第二个函数（<code>reject</code>）将被调用，并返回失败原因。</p> <h2 id="一个简单的例子"><a href="#一个简单的例子" class="header-anchor">#</a> 一个简单的例子</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>const myFirstPromise = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        Math.random() &gt; 0.5 ? resolve('success') : reject('fail');
+    }, 1000);
+});
+
+console.log(myFirstPromise); // Promise {&lt;pending&gt;}
+
+myFirstPromise.then((result) =&gt; {
+    console.log(result);
+}, (err) =&gt; {
+    console.log(err);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>一个 <code>Promise</code> 必然处于以下几种状态之一：</p> <ul><li><strong>等待（pending）</strong> : 初始状态，既没有被完成，也没有被拒绝。</li> <li><strong>已实现（fulfilled）</strong> : 意味着操作成功完成。</li> <li><strong>已拒绝（rejected）</strong> : 意味着操作失败。</li></ul> <p><code>then()</code>方法返回一个<code>Promise</code>它最多有两个参数：Promise 的成功和失败情况的回调函数。</p> <p>第一个参数(<code>onFulfilled</code>)：当<code>Promise</code>的状态为<code>fulfilled</code>时被调用，该函数有一个参数，即完成的最终结果。如果该参数不是一个函数，则会被内部替换为<code>(x) =&gt; x</code>, 即原样返回 Promise 最终结果的函数。</p> <p>第二个参数(<code>onRejected</code>)：当<code>Promise</code>的状态为<code>rejected</code>时被调用，该函数有一个参数，即拒绝的原因。如果该参数不是一个函数，则会被内部替换为一个<code>&quot;Thrower&quot; 函数 (it throws an error it received as argument)</code>。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>myFirstPromise.then((result) =&gt; {
+    // 当 Promise 被 fulfilled 时
+    console.log(result);
+}).catch((reason) =&gt; {
+    // 当 Promise 被 rejected 时
+    console.log(reason);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><code>catch()</code>方法返回一个<code>Promise</code>并且处理拒绝的情况。它的行为与调用<code>then(undefined, onRejected)</code> 相同。</p> <p><code>catch()</code>接受一个参数 (回调函数)：</p> <p>当<code>Promise</code>被<code>rejected</code>时调用的函数。该函数拥有一个参数<code>reason</code>(<code>rejected</code>的原因)</p> <p>如果这个参数 (指的是 <code>onRejected</code>) 不是函数时，也是会报错的。<strong>这与 <code>then()</code> 方法中第二个参数不是函数的情况吻合。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>myFirstPromise.finally(() =&gt; {
+
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><code>finally()</code>方法在 Promise 结束时，无论结果是<code>fulfilled</code>还是<code>rejected</code>，都会执行的回调函数。这样可以避免同样的语句需要在<code>then()</code>和<code>catch()</code>中都要写一次的情况。</p> <p>如果你想在<code>Promise</code>执行完毕后无论其结果怎样都做一些处理或清理时<code>finally()</code>方法或许是你需要的。</p> <p><code>finally()</code>方法的回调函数不接受任何参数，这意味着没有办法知道前面的<code>Promise</code>状态到底是<code>fulfilled</code>还是<code>rejected</code>。
+这表明<code>finally</code>仅用于无论最终结果如何都要执行的情况，而不能依赖<code>Promise</code>执行结果。</p> <p><code>finally()</code>方法本身无异常抛出的情况下，总是会返回原来的<code>Promise</code>对象值；若抛出异常，则返回异常的 Promise`对象。
+</p><p align="right"><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">更多关于Promise&gt;&gt;&gt;</a></p><p></p> <h2 id="promise-存在的意义是什么"><a href="#promise-存在的意义是什么" class="header-anchor">#</a> Promise 存在的意义是什么？</h2> <p>我们都知道<code>Promise()</code>执行是同步的，而<code>then()</code>执行是异步的，为什么？</p> <p>为什么<code>Promise()</code>执行是同步的，而 <code>then()</code>执行是异步的呢？我就想把<code>then()</code>设计成同步不行吗？</p> <p>那么先看一个ajax的例子测试，这里用的是<code>jquery</code>。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>data.json
+[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;zhangsan&quot;
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;lisi&quot;
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;wangwu&quot;
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;LPieces&quot;
+    }
+]
+
+index.js
+// 异步程序
+$.ajax({
+    url: &quot;http://localhost:3000/data.json&quot;,
+    success (data) {
+        console.log(data.map(item=&gt;item.name));
+    }
+});
+console.log(&quot;My name is LPieces.&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>运行结果：</p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d98b058ed3941b294ff361509fe3a80~tplv-k3u1fbpfcp-watermark.image?" alt="截屏2021-10-11 上午11.19.37.png"></p> <p>上面的代码中<code>$.ajax()</code>是异步程序，而js执行是从上往下同步执行，当异步程序请求没回来时，下面<code>console.log()</code>当然就打印了这个很简单。那现在我想要把<code>success</code>中的操作抽离到外层出来怎么做呢？看下面的代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 异步程序
+const data = $.ajax({
+    url: &quot;http://localhost:3000/data.json&quot;,
+    async: false // 同步
+});
+console.log(data.responseJSON.map(item=&gt;item.name));
+console.log(&quot;My name is LPieces.&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>运行结果：</p> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16fe2875fb904297a50cefba5d2f1525~tplv-k3u1fbpfcp-watermark.image?" alt="截屏2021-10-11 下午6.19.25.png"></p> <p>当我设置了<code>async: false</code>上面的<code>ajax</code>和下面的打印就形成了同步的关系，虽然实现了我想要的结果，但是打印的<code>My name is LPieces</code>跑到下面去了，它要等着上面<code>ajax</code>执行完才打印出来，那这就不对了哦，这会阻塞了下面所有的代码。既然这样，来看看<code>Promise</code>怎么帮我解决这个问题：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p = new Promise((resolve, reject) =&gt; {
+    $.ajax({
+        url: 'http://localhost:3000/data.json',
+        success (data) {
+            resolve(data);
+        }
+    })
+})
+p.then(res =&gt; {
+    console.log(res.map(item=&gt;item.name));
+})
+console.log(&quot;My name is LPieces.&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>运行结果：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc7c5f86c1e441e381a734e9b353e2b9~tplv-k3u1fbpfcp-watermark.image?" alt="截屏2021-10-12 上午10.11.40.png"></p> <p>是不是完美的解决了阻塞的问题呀，到这里应该能理解为什么<code>Promise()</code>的执行一定是同步的，而 <code>then()</code>的执行一定是异步的了吧，如果<code>then()</code>是同步执行的话，那么就会回到上面阻塞的问题去了，那我设置<code>async: false</code>不香吗？干嘛还要写个<code>Promise</code>包裹<code>ajax</code>的代码呢？</p> <h3 id="promise-的存在是解决回调地狱吗"><a href="#promise-的存在是解决回调地狱吗" class="header-anchor">#</a> Promise 的存在是解决回调地狱吗？</h3> <p><code>Promise</code>只是顺便解决回调地狱，解决回调地狱最好的方法是<code>Promise + async awiat</code>的结合，举个栗子：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function getData(){
+    return new Promise((resolve, reject) =&gt; {
+        // 注：当然 ajax 本身也有 Promise , 这里只是举个栗子
+        $.ajax({
+            url: 'http://localhost:3000/data.json',
+            success (data) {
+                resolve(data);
+            }
+        })
+    })
+}
+async function doSth(){
+    try{
+        const data = await getData();
+        console.log(data.map(item=&gt;item.name));
+        console.log(&quot;My name is LPieces.&quot;);
+    }catch(err){
+        console.log(err);
+    }
+}
+doSth();
+console.log(&quot;My name is LPieces.&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>运行结果：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/17caeba4043141e88946145b922bec44~tplv-k3u1fbpfcp-watermark.image?" alt="截屏2021-10-12 上午10.56.09.png"></p> <p><code>doSth()</code>和下面的打印是同步的执行关系。在<code>doSth()</code>里处理异步请求，如果需要上一个请求有结果后再请求，一路<code>await</code>下去就行了。</p> <h3 id="promise-存在的意义是异步问题同步化解决方案"><a href="#promise-存在的意义是异步问题同步化解决方案" class="header-anchor">#</a> <strong>Promise 存在的意义是异步问题同步化解决方案</strong></h3></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-cb1513f6><li class="level-2" data-v-cb1513f6><a href="/views/tan-suo-javascript/2021/promise---yi-bu-wen-ti-tong-bu-hua-jie-jue-fang-an.html#什么是-promise" class="sidebar-link reco-side-什么是-promise" data-v-cb1513f6>什么是 Promise?</a></li><li class="level-2" data-v-cb1513f6><a href="/views/tan-suo-javascript/2021/promise---yi-bu-wen-ti-tong-bu-hua-jie-jue-fang-an.html#一个简单的例子" class="sidebar-link reco-side-一个简单的例子" data-v-cb1513f6>一个简单的例子</a></li><li class="level-2" data-v-cb1513f6><a href="/views/tan-suo-javascript/2021/promise---yi-bu-wen-ti-tong-bu-hua-jie-jue-fang-an.html#promise-存在的意义是什么" class="sidebar-link reco-side-promise-存在的意义是什么" data-v-cb1513f6>Promise 存在的意义是什么？</a></li><li class="level-3" data-v-cb1513f6><a href="/views/tan-suo-javascript/2021/promise---yi-bu-wen-ti-tong-bu-hua-jie-jue-fang-an.html#promise-的存在是解决回调地狱吗" class="sidebar-link reco-side-promise-的存在是解决回调地狱吗" data-v-cb1513f6>Promise 的存在是解决回调地狱吗？</a></li><li class="level-3" data-v-cb1513f6><a href="/views/tan-suo-javascript/2021/promise---yi-bu-wen-ti-tong-bu-hua-jie-jue-fang-an.html#promise-存在的意义是异步问题同步化解决方案" class="sidebar-link reco-side-promise-存在的意义是异步问题同步化解决方案" data-v-cb1513f6>Promise 存在的意义是异步问题同步化解决方案</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#b7daff" loop="loop" order="random" preload="auto" volume="0.1" mutex="true" lrc-type="0" list-folded="true" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/assets/js/app.4e3f1233.js" defer></script><script src="/assets/js/3.03b3ff5a.js" defer></script><script src="/assets/js/1.180526b5.js" defer></script><script src="/assets/js/14.bb56bb6d.js" defer></script>
+  </body>
+</html>
