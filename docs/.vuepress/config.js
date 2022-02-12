@@ -22,7 +22,13 @@ module.exports = {
     nav: [
       {text: '主页', link: '/', icon: 'reco-home'},
       {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
-      {text: '关于我', link: '/about/', icon: 'reco-account'}
+      {
+        text: '联系', items: [
+          { text: 'Github', link: 'https://github.com/LPieces', icon: 'reco-github' },
+          { text: '稀土掘金', link: 'https://juejin.cn/user/176367608019806', icon: 'reco-juejin' }
+        ], icon: 'reco-message'
+      },
+      // {text: '关于我', link: '/about/', icon: 'reco-account'}
     ],
     friendLink: [
       {
