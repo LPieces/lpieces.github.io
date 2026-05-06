@@ -93,30 +93,16 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/binfe-2020-zh': RouteRecordInfo<
-      '/posts/binfe-2020-zh',
-      '/posts/binfe-2020-zh',
+    '/posts/git-exp': RouteRecordInfo<
+      '/posts/git-exp',
+      '/posts/git-exp',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/bonjour-paris': RouteRecordInfo<
-      '/posts/bonjour-paris',
-      '/posts/bonjour-paris',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/break-lines-in-js': RouteRecordInfo<
-      '/posts/break-lines-in-js',
-      '/posts/break-lines-in-js',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/icons-in-pure-css-zh': RouteRecordInfo<
-      '/posts/icons-in-pure-css-zh',
-      '/posts/icons-in-pure-css-zh',
+    '/posts/js-pre-compilation': RouteRecordInfo<
+      '/posts/js-pre-compilation',
+      '/posts/js-pre-compilation',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -195,27 +181,15 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'pages/posts/binfe-2020-zh.md': {
+    'pages/posts/git-exp.md': {
       routes:
-        | '/posts/binfe-2020-zh'
+        | '/posts/git-exp'
       views:
         | never
     }
-    'pages/posts/bonjour-paris.md': {
+    'pages/posts/js-pre-compilation.md': {
       routes:
-        | '/posts/bonjour-paris'
-      views:
-        | never
-    }
-    'pages/posts/break-lines-in-js.md': {
-      routes:
-        | '/posts/break-lines-in-js'
-      views:
-        | never
-    }
-    'pages/posts/icons-in-pure-css-zh.md': {
-      routes:
-        | '/posts/icons-in-pure-css-zh'
+        | '/posts/js-pre-compilation'
       views:
         | never
     }
