@@ -93,6 +93,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/deepClone': RouteRecordInfo<
+      '/posts/deepClone',
+      '/posts/deepClone',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/git-exp': RouteRecordInfo<
       '/posts/git-exp',
       '/posts/git-exp',
@@ -100,9 +107,30 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/iife': RouteRecordInfo<
+      '/posts/iife',
+      '/posts/iife',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/js-pre-compilation': RouteRecordInfo<
       '/posts/js-pre-compilation',
       '/posts/js-pre-compilation',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/promise': RouteRecordInfo<
+      '/posts/promise',
+      '/posts/promise',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/undefined': RouteRecordInfo<
+      '/posts/undefined',
+      '/posts/undefined',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -181,15 +209,39 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'pages/posts/deepClone.md': {
+      routes:
+        | '/posts/deepClone'
+      views:
+        | never
+    }
     'pages/posts/git-exp.md': {
       routes:
         | '/posts/git-exp'
       views:
         | never
     }
+    'pages/posts/iife.md': {
+      routes:
+        | '/posts/iife'
+      views:
+        | never
+    }
     'pages/posts/js-pre-compilation.md': {
       routes:
         | '/posts/js-pre-compilation'
+      views:
+        | never
+    }
+    'pages/posts/promise.md': {
+      routes:
+        | '/posts/promise'
+      views:
+        | never
+    }
+    'pages/posts/undefined.md': {
+      routes:
+        | '/posts/undefined'
       views:
         | never
     }
