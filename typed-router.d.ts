@@ -128,6 +128,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/sse': RouteRecordInfo<
+      '/posts/sse',
+      '/posts/sse',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/undefined': RouteRecordInfo<
       '/posts/undefined',
       '/posts/undefined',
@@ -236,6 +243,12 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/promise.md': {
       routes:
         | '/posts/promise'
+      views:
+        | never
+    }
+    'pages/posts/sse.md': {
+      routes:
+        | '/posts/sse'
       views:
         | never
     }
