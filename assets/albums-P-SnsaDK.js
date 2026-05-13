@@ -1,1 +1,0 @@
-import{R as e,Y as t,g as n,h as r}from"./dist-CL_bAmHc.js";import{n as i,t as a}from"./vue.D51lypTh-Cdk7g2dA.js";var o={__name:`albums`,setup(o){let s={meta:[]};return a({meta:[]}),(a,o)=>{let c=i;return e(),n(c,{frontmatter:s},{default:t(()=>[...o[0]||=[r(`div`,{class:`prose m-auto slide-enter-content`},null,-1)]]),_:1})}}};export{o as default};
