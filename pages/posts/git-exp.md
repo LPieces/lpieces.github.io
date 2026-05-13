@@ -4,9 +4,10 @@ date: 2026-03-16T17:00:00.000+08:00
 lang: zh
 duration: 6min
 ---
+
 在日常开发中，Git 是我们不可或缺的版本控制工具。为了更好地管理和协作代码，我整理了一些我常用的 Git 命令和使用经验，涵盖提交规范、标签管理、暂存操作、推送策略、分支同步、版本回退等多个方面。
 
-# 一、Commit 提交前缀规范
+## 一、Commit 提交前缀规范
 
 - `feat(常用)`：新增功能（开发新功能时必用）
 - `fix(常用)`：修复 bug
@@ -19,9 +20,9 @@ duration: 6min
 - `chore`：改变构建流程、或者增加依赖库、工具等
 - `revert`：回滚到上一个版本
 
-# 二、Stash 暂存操作
+## 二、Stash 暂存操作
 
-当你需要切换分支但不想提交当前修改时，可以使用 `stash`。
+当你需要切换分支但不想提交当前修改时，可以使用 `stash`。
 
 ```bash
 # 快速暂存，不写描述（适合临时、马上就会恢复的情况）
@@ -49,7 +50,8 @@ git stash apply stash@{1}
 git stash branch <新分支名> stash@{1}
 ```
 
-# 三、Push 的默认行为
+## 三、Push 的默认行为
+
 ```bash
 # ========== 一、基础概念 ==========
 # push.default 是 Git 的一个配置选项，决定了执行 git push 时的默认行为
@@ -146,7 +148,9 @@ git push --force                      # 强制推送（慎用）
 # 避免使用 matching 模式
 # 慎用 --force
 ```
-# 四、Cherry-pick 同步提交
+
+## 四、Cherry-pick 同步提交
+
 ```bash
 # ========== 基础操作 ==========
 
@@ -191,7 +195,8 @@ git cherry-pick --abort
 git cherry-pick --skip
 ```
 
-# 五、更新远程分支列表
+## 五、更新远程分支列表
+
 ```bash
 # ========== 两个核心命令的区别 ==========
 
@@ -210,9 +215,9 @@ git branch -r
 
 # 仅清理本地已删除的远程分支引用
 git remote prune origin
-````
+```
 
-# 六、拉取远程分支到本地
+## 六、拉取远程分支到本地
 
 ```bash
 # ========== 拉取远程分支到本地（5种方式） ==========
@@ -241,7 +246,8 @@ git branch <本地分支名> origin/<远程分支名>
 git branch -vv              # 查看所有分支的跟踪关系
 git branch -u origin/<远程分支名>  # 为当前分支设置上游
 ```
-# 七、替换默认源
+
+## 七、替换默认源
 
 ```bash
 # 查看当前地址
@@ -250,9 +256,11 @@ git remote -v
 # 替换远程地址
 git remote set-url origin <新地址>        # 直接替换（推荐）
 git remote remove origin                   # 先删除
-git remote add origin <新地址>             # 再添加           
+git remote add origin <新地址>             # 再添加
 ```
-# 八、配置 Git 代理
+
+## 八、配置 Git 代理
+
 ```bash
 # 设置代理
 git config --global http.proxy http://127.0.0.1:7890

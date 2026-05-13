@@ -4,6 +4,7 @@ date: 2021-11-10T13:00:00.000+08:00
 lang: zh
 duration: 3min
 ---
+
 ## JS运行三步曲
 
 1. 语法分析：扫描看有没有语法错误，但不执行
@@ -21,12 +22,15 @@ duration: 3min
 ## 预编译前奏
 
 1. `imply global` 暗示全局变量：即任何变量，如果变量未经声明就赋值，此变量就为全局对象所有。
+
 ```
 // eg(exempli gratia):
 a = 123;
 var a = 123;
 ```
+
 2. 一切声明的全局变量，都是window的属性。
+
 ```
 eg: var a = 123; ===> window.a = 123;
 ```
@@ -41,9 +45,10 @@ eg: var a = 123; ===> window.a = 123;
 
 4. 找`function函数声明`(非函数表达式)，值`赋予函数体`
 
->注：上面是函数预编译四部曲，相比全局预编译不同点在于创建对象为`GO(Global Object，全局执行期上下文，在浏览器中为window)`，全局预编译`无形参`自然也`没有第三步`！！！
+> 注：上面是函数预编译四部曲，相比全局预编译不同点在于创建对象为`GO(Global Object，全局执行期上下文，在浏览器中为window)`，全局预编译`无形参`自然也`没有第三步`！！！
 
 ## 函数预编译举例
+
 ```
 function fu(a){
     console.log(a);
@@ -65,7 +70,7 @@ function fu(a){
     var d = 456;
 
     function d(){}
-    
+
     console.log(d);
 
     var d = function(){}
@@ -76,15 +81,19 @@ function fu(a){
 ```
 
 ### 第一步
+
 创建AO对象
+
 ```
 AO {
 
 }
 ```
+
 ### 第二步
 
 找形参和变量声明，形参有a，变量声明有a，b，d，作为AO对象属性名，值为undefined。
+
 ```
 AO {
     a: undefined,
@@ -96,6 +105,7 @@ AO {
 ### 第三步
 
 实参和形参相统一，把实参7丢给形参a
+
 ```
 AO {
     a: 7,
@@ -103,9 +113,11 @@ AO {
     d: undefined
 }
 ```
+
 ### 第四步
 
 找函数声明，函数声明有fun a,fun d，值赋予函数体。
+
 ```
 AO {
     a: function a(){},
@@ -117,6 +129,7 @@ AO {
 ### 解释执行
 
 到这预编译就结束了，开始解释执行代码，结果如下：
+
 ```
 function fu(a){
     console.log(a); // function a(){}
@@ -163,14 +176,17 @@ console.log(test);
   test(1);
   var test = 234;
 ```
+
 ### 第一步
 
 创建GO对象
+
 ```
 GO {
 
 }
 ```
+
 ### 第二步
 
 全局`没有形参`只找变量声明test，作为GO对象属性名，值为undefined。
@@ -180,6 +196,7 @@ GO {
     test: undefined
 }
 ```
+
 ### 第三步
 
 全局没有第三步
@@ -193,6 +210,7 @@ GO {
     test: function (){...}
 }
 ```
+
 ### 解释执行
 
 函数预编译发生在函数执行的前一刻，所以当test执行前一刻会预编译AO对象，再执行函数体
@@ -213,8 +231,11 @@ console.log(test); // 输出函数体
   test(1);
   var test = 234;
 ```
+
 ## 练习
+
 ### 1.
+
 ```
 function test(){
     console.log(b);
@@ -229,7 +250,9 @@ function test(){
   a = 10;
   console.log(c);
 ```
+
 ### 2.1
+
 ```
 function bar() {
     return foo;
@@ -239,7 +262,9 @@ function bar() {
   }
   console.log(bar());
 ```
+
 ### 2.2
+
 ```
 console.log(bar());
   function bar() {
@@ -249,7 +274,9 @@ console.log(bar());
     return foo;
   }
 ```
+
 ### 3.
+
 ```
 a = 100;
   function demo(e){

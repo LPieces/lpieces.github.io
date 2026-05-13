@@ -5,6 +5,7 @@ import antfu from '@antfu/eslint-config'
 export default antfu(
   {
     formatters: true,
+    markdown: false,
     pnpm: true,
   },
 ).removeRules(
@@ -24,4 +25,6 @@ export default antfu(
   'e18e/prefer-static-regex',
   'markdown/heading-increment',
   'markdown/require-alt-text',
+  'style/no-multiple-empty-lines',
+  'no-irregular-whitespace',
 )
