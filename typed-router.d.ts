@@ -93,6 +93,48 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/【LPieces-UI】01-从零开始搭建Vue3组件库': RouteRecordInfo<
+      '/posts/【LPieces-UI】01-从零开始搭建Vue3组件库',
+      '/posts/%E3%80%90LPieces-UI%E3%80%9101-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAVue3%E7%BB%84%E4%BB%B6%E5%BA%93',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/【LPieces-UI】02-Icon组件的设计与实现': RouteRecordInfo<
+      '/posts/【LPieces-UI】02-Icon组件的设计与实现',
+      '/posts/%E3%80%90LPieces-UI%E3%80%9102-Icon%E7%BB%84%E4%BB%B6%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/【LPieces-UI】03-Button组件完整实现': RouteRecordInfo<
+      '/posts/【LPieces-UI】03-Button组件完整实现',
+      '/posts/%E3%80%90LPieces-UI%E3%80%9103-Button%E7%BB%84%E4%BB%B6%E5%AE%8C%E6%95%B4%E5%AE%9E%E7%8E%B0',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/【LPieces-UI】04-使用Storybook实现组件预览': RouteRecordInfo<
+      '/posts/【LPieces-UI】04-使用Storybook实现组件预览',
+      '/posts/%E3%80%90LPieces-UI%E3%80%9104-%E4%BD%BF%E7%94%A8Storybook%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%A2%84%E8%A7%88',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/【LPieces-UI】05-GitHubActionsCICD自动化': RouteRecordInfo<
+      '/posts/【LPieces-UI】05-GitHubActionsCICD自动化',
+      '/posts/%E3%80%90LPieces-UI%E3%80%9105-GitHubActionsCICD%E8%87%AA%E5%8A%A8%E5%8C%96',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/【LPieces-UI】06-Vitest单元测试实战': RouteRecordInfo<
+      '/posts/【LPieces-UI】06-Vitest单元测试实战',
+      '/posts/%E3%80%90LPieces-UI%E3%80%9106-Vitest%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%98',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/deepClone': RouteRecordInfo<
       '/posts/deepClone',
       '/posts/deepClone',
@@ -131,6 +173,13 @@ declare module 'vue-router/auto-routes' {
     '/posts/sse': RouteRecordInfo<
       '/posts/sse',
       '/posts/sse',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/ts-type-tools': RouteRecordInfo<
+      '/posts/ts-type-tools',
+      '/posts/ts-type-tools',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -216,6 +265,42 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'pages/posts/【LPieces-UI】01-从零开始搭建Vue3组件库.md': {
+      routes:
+        | '/posts/【LPieces-UI】01-从零开始搭建Vue3组件库'
+      views:
+        | never
+    }
+    'pages/posts/【LPieces-UI】02-Icon组件的设计与实现.md': {
+      routes:
+        | '/posts/【LPieces-UI】02-Icon组件的设计与实现'
+      views:
+        | never
+    }
+    'pages/posts/【LPieces-UI】03-Button组件完整实现.md': {
+      routes:
+        | '/posts/【LPieces-UI】03-Button组件完整实现'
+      views:
+        | never
+    }
+    'pages/posts/【LPieces-UI】04-使用Storybook实现组件预览.md': {
+      routes:
+        | '/posts/【LPieces-UI】04-使用Storybook实现组件预览'
+      views:
+        | never
+    }
+    'pages/posts/【LPieces-UI】05-GitHubActionsCICD自动化.md': {
+      routes:
+        | '/posts/【LPieces-UI】05-GitHubActionsCICD自动化'
+      views:
+        | never
+    }
+    'pages/posts/【LPieces-UI】06-Vitest单元测试实战.md': {
+      routes:
+        | '/posts/【LPieces-UI】06-Vitest单元测试实战'
+      views:
+        | never
+    }
     'pages/posts/deepClone.md': {
       routes:
         | '/posts/deepClone'
@@ -249,6 +334,12 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/sse.md': {
       routes:
         | '/posts/sse'
+      views:
+        | never
+    }
+    'pages/posts/ts-type-tools.md': {
+      routes:
+        | '/posts/ts-type-tools'
       views:
         | never
     }

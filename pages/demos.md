@@ -1,8 +1,8 @@
 ---
-title: Demos - Anthony Fu
+title: Demos - LPieces
 display: Demos
-subtitle: Demonstrations for projects I am working on from Tweets
-description: Demonstrations for projects I am working on from Tweets
+subtitle: Demos by LPieces
+description: Demos by LPieces
 art: dots
 ---
 
