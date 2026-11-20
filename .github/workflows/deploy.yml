@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+# 核心：给内置GITHUB_TOKEN开启写权限
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -29,5 +34,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.LPIECES_CN_SECRET }}
+          # 使用GitHub自带自动注入的token，不需要你手动创建
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
