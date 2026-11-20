@@ -1,4 +1,4 @@
-import{Ct as e,Et as t,L as n,N as r,R as i,Tt as a,U as o,X as s,_ as c,at as l,f as u,g as d,h as f,it as p,p as m,v as h,w as g,y as _,z as v}from"./dist-DEmgr78k.js";import{c as y,i as b,u as x}from"./app-Bi6cv1WR.js";import{n as S,t as C}from"./vue.D51lypTh-DxhDXDo3.js";var w=[{id:1805290318,name:`河北墨麒麟`,album:`冀西南林路行`,cover:`http://p1.music.126.net/aEehIWg8Qk5DXLGf0XZHqw==/109951166554891221.jpg`,audio:`http://music.163.com/song/media/outer/url?id=1805290318.mp3`,lyric:[],lyricStr:`[00:00.000] 作词 : 姬赓
+import{Ct as e,Et as t,L as n,N as r,R as i,Tt as a,U as o,X as s,_ as c,at as l,f as u,g as d,h as f,it as p,p as m,v as h,w as g,y as _,z as v}from"./dist-DEmgr78k.js";import{c as y,i as b,u as x}from"./app-BV-G4_BE.js";import{n as S,t as C}from"./vue.D51lypTh-BwKRTUBT.js";var w=[{id:1805290318,name:`河北墨麒麟`,album:`冀西南林路行`,cover:`http://p1.music.126.net/aEehIWg8Qk5DXLGf0XZHqw==/109951166554891221.jpg`,audio:`http://music.163.com/song/media/outer/url?id=1805290318.mp3`,lyric:[],lyricStr:`[00:00.000] 作词 : 姬赓
 [00:01.000] 作曲 : 董亚千
 [00:02.000] 编曲 : 万能青年旅店
 [00:03.000] 制作人 : 万能青年旅店
